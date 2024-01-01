@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 
 	if(list == NULL)
 		return(0);
-	while(fixedList != NULL && changedList != NULL && changedList != NULL)
+	while(changedList != NULL && changedList != NULL)
 	{
 		fixedList = fixedList -> next;
 		changedList = (changedList -> next) -> next;
