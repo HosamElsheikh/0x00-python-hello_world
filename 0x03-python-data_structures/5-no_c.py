@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
 def no_c(my_string):
-    new = my_string
-    for i in range(len(new)):
-        if new[i] == c or new[i] == C:
-            new[i] = ""
-    return(new)
+    new_ = ""
+    for i in my_string:
+        if i not in "cC":
+            new_ += i
+    return (new_)
