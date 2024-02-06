@@ -2,6 +2,6 @@
 """This is a square class"""
 
 
-class Square
+class Square:
     """This creates a square empty class"""
     pass
