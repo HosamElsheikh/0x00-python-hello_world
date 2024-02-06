@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-"""This is a square class"""
+"""square class main"""
 
 
-class Square:
-    """This creates a square empty class"""
-    def __init__(self, size=None):
+class Square():
+    """square class"""
+    def __init__(self, size=0):
+        """ Instance of class Square
+    Arguments:
+        @size: size of side of square"""
+
         self.__size = size
-        if (type(size) != int):
+        if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
