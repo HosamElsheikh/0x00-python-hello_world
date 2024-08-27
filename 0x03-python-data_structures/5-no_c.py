@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    new_ = ""
-    for i in my_string:
-        if i not in "cC":
-            new_ += i
-    return (new_)
+    cpd_string = ""
+    for i in range(len(my_string)):
+        if (ord(my_string[i]) == ord('c') or ord('C') == ord(my_string[i])):
+            continue
+        cpd_string += my_string[i]
+    return (cpd_string)
