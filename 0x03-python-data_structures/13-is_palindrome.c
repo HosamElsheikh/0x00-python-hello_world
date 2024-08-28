@@ -1,19 +1,16 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-int check_size(listint_t *head);
 
 /**
- * is_palindrome - check if the linked list is a palindrome
- * @head: list to be checked
- *
- * Return: 0 if it isnt and 1 if it is
- */
+* is_palindrome - checks if a list is palindrome
+* @head: The list
+* Return: 0 if not a palindrome, 1 if it is a palindrome
+*/
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
 	int size = check_size(temp), i = 0;
-	int check_A[12700];
+
+	int *check_A = malloc(size * sizeof(int));
 
 	if (check_A == NULL)
 		return (0);
@@ -34,15 +31,17 @@ int is_palindrome(listint_t **head)
 			return (0);
 		}
 	}
+
+	free(check_A);
 	return (1);
 }
 
 /**
- * check_size - return size of list
- * @head: list to be checked
- *
- * Return: size of list
- */
+* check_size - return size of list
+* @head: list to be checked
+*
+* Return: size of list
+*/
 
 int check_size(listint_t *head)
 {
