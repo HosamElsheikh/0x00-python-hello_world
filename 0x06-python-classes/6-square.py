@@ -11,9 +11,8 @@ class Square:
 
         Args:
             size (int): The size of the new square.
-            position (coordinates): The position of the square
+            position (tuple): The position of the square
         """
-
         self.size = size
         self.position = position
 
@@ -25,11 +24,6 @@ class Square:
     def size(self):
         """This function returns the value of the size"""
         return self.__size
-
-    @property
-    def position(self):
-        """This function returns the position of the square in a plain"""
-        return self.__position
 
     @size.setter
     def size(self, value):
@@ -43,6 +37,11 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @property
+    def position(self):
+        """This function returns the position of the square in a plane"""
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -61,14 +60,11 @@ class Square:
         """This function results in printing the square"""
         if self.__size == 0:
             print("")
+            return
 
         for lines in range(self.__position[1]):
             print("")
 
         for i in range(self.__size):
-            for j in range(self.__size):
-                if j == 0:
-                    for spaces in range(self.__position[0]):
-                        print(" ", end="")
-                print("#", end="")
-            print("")
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
