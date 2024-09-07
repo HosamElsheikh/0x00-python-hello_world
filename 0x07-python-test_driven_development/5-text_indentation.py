@@ -13,7 +13,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for i in text:
-        if skip_space is True:
+        if skip_space is True and i == " ":
             skip_space = False
             continue
         elif i in ".?:":
