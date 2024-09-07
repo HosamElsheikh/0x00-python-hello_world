@@ -1,12 +1,6 @@
 >>> say_my_name = __import__("3-say_my_name").say_my_name
 >>> first_name_1 = "Hosam"
-first_name_1 = "Hosam"
-Traceback (most recent call last):
-  File "<stdin>", line 0, in <module>
-KeyboardInterrupt
->>> first_name_1 = "Hosam"
 >>> first_name_2 = 25
->>> first_name_2 = ""
 >>> first_name_4 = None
 >>> first_name_3 = ""
 >>> last_name_1 = "Elsheikh"
@@ -22,7 +16,9 @@ Traceback (most recent call last):
     raise TypeError("last_name must be a string")
 TypeError: last_name must be a string
 >>> say_my_name(first_name_1, last_name_3)
-My name is Hosam 
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
 >>> say_my_name(first_name_1, last_name_4)
 My name is Hosam 
 >>> say_my_name(first_name_1, last_name_1)
