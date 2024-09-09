@@ -5,8 +5,13 @@
 class Rectangle:
     """This is a rectangle class"""
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        """Initializes a new rectangle class.
+        Ars:
+            @width (int): The width of the triangle
+            @height(int): The height of the triangle
+        """
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
