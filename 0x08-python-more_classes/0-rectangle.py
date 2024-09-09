@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Rectangle class to represent a square"""
+"""This creates a python class"""
 
 
-class Rectangle():
-    """Empty"""
+class Rectangle:
+    """This is a rectangle class"""
     pass
