@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""look up class"""
+"""This class is to generate a lookup on the
+attributes found inside a specific object"""
 
 
-def lookup(object):
-    """start of lookup
-        Return: list of used methods and attributes"""
-    return dir(object)
-
+def lookup(obj):
+    """This function performs a lookup"""
+    return dir(obj)
