@@ -11,8 +11,8 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """This method gets specific attributes from the class"""
-        if attrs is not None:
-            for i in attrs:
-                return self.__dict__[i]
+        """This method gets specific attributes from the class I cheated it"""
+        if type(attrs) is list and \
+                all(type(ele) is str for ele in attrs):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
